@@ -13,5 +13,9 @@ export default defineConfig(({ mode }) => {
 			'process.env.TLDRAW_WORKER_URL':
 				process.env.TLDRAW_WORKER_URL ?? '`http://${location.hostname}:5172`',
 		},
-	}
-})
+		build: {
+			outDir: './public',
+			emptyOutDir: true,
+		},
+	};
+});
